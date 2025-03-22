@@ -1,7 +1,6 @@
 import Content from '../models/contentModel';
 import { Response } from 'express';
 import { AuthenticationRequest } from '../lib/types';
-import mongoose from 'mongoose';
 
 export const addContent = async (
   req: AuthenticationRequest,
@@ -32,7 +31,7 @@ export const addContent = async (
     });
 
     res.status(200).json({
-      success: false,
+      success: true,
       user: req.userId,
       message: 'Content added',
       content: content,
@@ -61,7 +60,7 @@ export const getAllContent = async (
       content,
     });
   } catch (error) {
-    console.error('Error in add content', error);
+    console.error('Error in get all content', error);
     res.status(500).json({
       success: false,
     });

@@ -10,3 +10,5 @@ const contentRouter = express.Router();
 contentRouter.post('/content/add', auth, addContent);
 contentRouter.get('/content/get', auth, getAllContent);
 contentRouter.put('/content/edit', auth, editContent);
+
+export default contentRouter;

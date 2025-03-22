@@ -1,6 +1,9 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import { connectDB } from './lib/db';
+import userRouter from './routes/authRoute';
+import contentRouter from './routes/contentRoute';
+import auth from './middleware/authMiddleware';
 
 dotenv.config();
 
@@ -11,7 +14,8 @@ app.use(express.json())
 
 
 
-app.get('/api/v1', )
+app.use('/api/v1', userRouter)
+app.use('/api/v1', auth, contentRouter)
 
 app.listen(PORT, () => {
   console.log(`Server started on PORT: ${PORT}`);
