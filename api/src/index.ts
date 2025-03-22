@@ -9,9 +9,9 @@ const PORT: number = parseInt(process.env.PORT as string, 10) || 3001;
 const app = express();
 app.use(express.json())
 
-app.get('/', (req, res) => {
-  res.send('HELLO FROM SERVER');
-});
+
+
+app.get('/api/v1', )
 
 app.listen(PORT, () => {
   console.log(`Server started on PORT: ${PORT}`);
