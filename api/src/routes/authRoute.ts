@@ -1,7 +1,13 @@
 import express from 'express';
-import { signup, login } from '../controller/authController';
+import { signup, signin } from '../controller/authController';
+import {
+  addContent,
+  editContent,
+  getAllContent,
+} from '../controller/contentController';
+import auth from '../middleware/authMiddleware';
 
-const router = express.Router()
+const router = express.Router();
 
-router.post('/auth', signup)
-// app.post('/auth', login)
+router.post('/auth/signup', auth, signup);
+router.post('/auth/signin', auth, signin);
