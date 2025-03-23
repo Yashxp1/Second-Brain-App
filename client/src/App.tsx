@@ -2,15 +2,34 @@ import { Button } from './components/Button';
 import PlusIcon from './Icons/PlusIcon';
 import ShareIcon from './Icons/ShareIcon';
 import Card from './components/Card';
-import {CreateContentModal }from './components/CreateContentModal';
+import { CreateContentModal } from './components/CreateContentModal';
+import { useState } from 'react';
+// import {Route, Routes} from 'react-router-dom'
+// import { Home } from './pages/Home';
 
 const App = () => {
+  const [modalOpen, setModalOpen] = useState(true);
   return (
     <div className="p-4">
-      <CreateContentModal open={true}/>
+      <CreateContentModal
+        open={modalOpen}
+        onClose={() => {
+          setModalOpen();
+        }}
+      />
       <div className="flex justify-end gap-4">
-        <Button variant="primary" text="Add content" startIcon={<PlusIcon />} />
         <Button
+          onClick={() => {
+            setModalOpen(true);
+          }}
+          variant="primary"
+          text="Add content"
+          startIcon={<PlusIcon />}
+        />
+        <Button
+          onClick={() => {
+            setModalOpen(true);
+          }}
           variant="secondary"
           text="Share Brain"
           startIcon={<ShareIcon />}
@@ -30,6 +49,9 @@ const App = () => {
           title="Youtube video"
         />
       </div>
+      {/* <Routes>
+        <Route path='/home' element={<Home/>}/>
+      </Routes> */}
     </div>
   );
 };

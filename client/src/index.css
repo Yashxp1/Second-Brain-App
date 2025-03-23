@@ -2,6 +2,8 @@
 
 
 
+
+
 @theme : {
   --color-purple-100: #d9ddee;
   --color-purple-200: #9492db;
@@ -11,4 +13,10 @@
   --color-gray-200: #e6e9ed;
   --color-gray-600: #95989c;
 
+  
 }
+
+/* body {
+
+  font-family: "Caveat", cursive
+} */

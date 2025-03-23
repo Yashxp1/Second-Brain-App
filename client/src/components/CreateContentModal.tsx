@@ -9,13 +9,17 @@ export const CreateContentModal = ({ open, onClose }) => {
           <div className="flex flex-col justify-center">
             <span className="bg-white opacity-100 p-4">
               <div className="flex justify-end">
-                <CrossIcon />
+                <div onClick={onClose} className='cursor-pointer'>
+                  <CrossIcon />
+                </div>
               </div>
               <div>
                 <Input placeholder={'Title'} />
                 <Input placeholder={'Link'} />
               </div>
-              <Button variant="primary" text="Submit" />
+              <div className="flex justify-center">
+                <Button variant="primary" text="Submit" />
+              </div>
             </span>
           </div>
         </div>
@@ -28,7 +32,7 @@ function Input({ onChange, placeholder }: { onChange: () => void }) {
   return (
     <div>
       <input
-        type={placeholder}
+        placeholder={placeholder}
         className="px-4 py-2 border rounded m-2"
         onChange={onChange}
       />
