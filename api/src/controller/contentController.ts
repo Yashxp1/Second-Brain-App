@@ -9,20 +9,29 @@ export const addContent = async (
   try {
     const { title, type, link, description, tags } = req.body;
 
-    if (!title || !type || !link || !description || !tags) {
+    if (!title || !type || !link) {
       res.status(400).json({
         success: false,
-        message: 'All the fields are required',
+        message: 'Title, type, and link are required',
       });
       return;
     }
+
+    // await Content.create({
+    //   link,
+    //   type,
+    //   title,
+    //   description,
+    //   tags,
+    //   userId: req.userId,
+    // });
 
     await Content.create({
       link,
       type,
       title,
-      description,
-      tags,
+      description: description || '', 
+      tags: tags || [], 
       userId: req.userId,
     });
 

@@ -7,7 +7,7 @@ const contentSchema = new mongoose.Schema({
   },
   type: {
     type: String,
-    enum: ['image', 'video', 'article', 'music', 'youtube', 'twitter', 'link'],
+    // enum: ['image', 'video', 'article', 'music', 'youtube', 'twitter', 'link'],
     required: true,
   },
   description: {
@@ -29,7 +29,7 @@ const contentSchema = new mongoose.Schema({
     ref: 'User',
     required: true,
   },
-});
+}, { timestamps: true });
 
 const Content = mongoose.model('Content', contentSchema);
 
