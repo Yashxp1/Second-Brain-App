@@ -1,22 +1,16 @@
-import { useNavigate } from "react-router-dom";
+import { Button } from '../components/Button';
+import { Input } from '../components/Input';
 
-const Signup = () => {
-  const navigate = useNavigate()
+export function Signup() {
   return (
-    <div className="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)] text-white">
-      <div className="flex flex-col justify-center items-center rounded-xl">
-        <h1 className="text-4xl font-bold my-6">Get Started</h1>
-        <div className="flex flex-col justify-center items-center m-4">
-          <input type="text" placeholder="Username"  className="bg-gray-800 px-3 py-1 rounded-lg my-4"/>
-          <input type="text" placeholder="Password" className="bg-gray-800 px-3 py-1 rounded-lg"/>
+    <div className="h-screen w-screen bg-gray-200 flex justify-center items-center">
+      <div className="bg-white border min-w-48 p-8 rounded-xl">
+        <Input placeholder="Username" />
+        <Input placeholder="Password" />
+        <div className="flex justify-center pt-4">
+          <Button loading={false} variant="primary" text="Signup" fullwidth={true} />
         </div>
-        <button onClick={() => navigate('/dashboard')} className=" text-white border-2 z-1 my-8 px-5 py-2 rounded-full transition delay-100 duration-200 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-white hover:text-black">
-          Signup
-        </button>
-        <span>Already have an account? <button onClick={() => navigate('/signin')} className="text-white font-bold py-4" >Signin</button></span>
       </div>
     </div>
   );
-};
-
-export default Signup;
+}
