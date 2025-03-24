@@ -5,8 +5,7 @@ import Card from '../components/Card';
 import { CreateContentModal } from '../components/CreateContentModal';
 import Sidebar from '../components/Sidebar';
 import { useState } from 'react';
-// import {Route, Routes} from 'react-router-dom'
-// import { Home } from './pages/Home';
+
 
 const Dashboard = () => {
   const [modalOpen, setModalOpen] = useState(false);
