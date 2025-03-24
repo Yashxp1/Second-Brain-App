@@ -39,7 +39,7 @@ const Dashboard = () => {
         </div>
 
         <div className="flex gap-4 p-4">
-          <Card
+          {/* <Card
             type="twitter"
             link="https://x.com/yashxp1/status/1903506015301288312"
             title="yashxp1"
@@ -49,17 +49,12 @@ const Dashboard = () => {
             type="youtube"
             link="https://youtu.be/3fFF_yQ0nx8?si=d1munf3wGj7Vqz0s"
             title="Youtube video"
-          />
+          /> */}
         </div>
       </div>
     </div>
   );
 };
 
-{
-  /* <Routes>
-  <Route path='/home' element={<Home/>}/>
-</Routes> */
-}
 
 export default Dashboard;
