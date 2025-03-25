@@ -6,6 +6,8 @@ import { CreateContentModal } from '../components/CreateContentModal';
 import Sidebar from '../components/Sidebar';
 import { useState } from 'react';
 import { useContent } from '../hooks/useContent';
+import axios from 'axios';
+import { BACKEND_URL } from '../config';
 
 const Dashboard = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -31,9 +33,9 @@ const Dashboard = () => {
             startIcon={<PlusIcon />}
           />
           <Button
-            onClick={() => {
-              setModalOpen(true);
-            }}
+            // onClick={() => {
+            //   axios.post(`${BACKEND_URL}/api/v1/share/link/share/:hash`)
+            // }}
             variant="secondary"
             text="Share Brain"
             startIcon={<ShareIcon />}

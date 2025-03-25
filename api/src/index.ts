@@ -18,7 +18,7 @@ app.use(cors())
 app.use('/api/v1', userRouter);
 app.use('/api/v1', auth, contentRouter);
 app.use('/api/v1', auth, tagRouter);
-app.use('/api/v1/links', auth, linkRoute);
+app.use('/api/v1', auth, linkRoute);
 
 app.listen(PORT, () => {
   console.log(`Server started on PORT: ${PORT}`);
