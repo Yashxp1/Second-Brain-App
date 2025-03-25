@@ -10,10 +10,18 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@mui/material": "^6.4.8",
     "@radix-ui/react-label": "^2.1.2",
     "@tabler/icons-react": "^3.31.0",
     "@tailwindcss/vite": "^4.0.15",
+    "@tsparticles/engine": "^3.8.1",
+    "@tsparticles/react": "^3.0.0",
+    "@tsparticles/slim": "^3.8.1",
+    "axios": "^1.8.4",
     "clsx": "^2.1.1",
+    "lucide-react": "^0.483.0",
     "motion": "^12.5.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
